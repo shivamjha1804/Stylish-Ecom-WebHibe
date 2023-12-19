@@ -4,8 +4,8 @@ import GetStarted from './src/Page/GetStarted/GetStarted'
 
 const App = () => {
   return (
-    <AppNavigator/>
-    // <GetStarted/>
+    // <AppNavigator/>
+    <GetStarted/>
   )
 }
 
