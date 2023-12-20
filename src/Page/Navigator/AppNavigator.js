@@ -5,6 +5,7 @@ import SwipeScreen from '../OpenPage/SwipeScreen';
 import Login from '../LoginPage/Login';
 import SignUp from '../SignUp/SignUp';
 import ForgetPassword from '../LoginPage/ForgetPassword';
+import Dashboard from '../Dashboard/Dashboard';
 
 const Stack = createNativeStackNavigator()
 
@@ -33,6 +34,12 @@ const AppNavigator = () => {
           name='ForgetPassword'
           component={ForgetPassword}
           options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name='Dashboard'
+          component={Dashboard}
+          options={{headerShown: false}}
         />
 
       </Stack.Navigator>
