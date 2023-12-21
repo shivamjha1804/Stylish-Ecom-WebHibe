@@ -6,13 +6,9 @@ import Home from './src/Page/Home/Home'
 
 const App = () => {
   return (
-      <>
+    <>
       <AppNavigator />
-        {/* 
-      <GetStarted /> */}
-        {/* <Home/> */}
-        
-      </>
+    </>
   )
 }
 

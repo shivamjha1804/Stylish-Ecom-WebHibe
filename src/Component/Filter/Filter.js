@@ -1,13 +1,13 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
 
-const Filter = () => {
+const Filter = (props) => {
   return (
     <View style={{backgroundColor:'white'}}>
         <View style={styles.Container}>
             <View style={styles.Row1}>
                 <Text style={styles.Text1}>
-                    All Featured
+                    {props.Title}
                 </Text>
             </View>
             <View style={styles.Row2}>
@@ -35,15 +35,19 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
 
+    Row1:{
+        width: "36%"
+    },
+
     Text1:{
         color: 'black',
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: '600'
     },
 
     Row2:{
         flexDirection: 'row',
-        marginLeft:"35%",
+        marginLeft: 100,
         alignItems: 'center'
     },
 

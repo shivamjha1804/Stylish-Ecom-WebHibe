@@ -1,0 +1,86 @@
+import React from 'react'
+import { Image, StyleSheet, Text, View } from 'react-native'
+
+const Description = () => {
+    return (
+        <View style={styles.Container}>
+            <View>
+                <Text style={styles.ProductName}>
+                    NIke Sneakers
+                </Text>
+            </View>
+            <View>
+                <Text style={styles.Description}>
+                    Vision Alta Men’s Shoes Size (All Colours)
+                </Text>
+            </View>
+            <View style={{flexDirection:'row', paddingVertical:10, alignItems:'center', columnGap: 10}}>
+                <View style={{flexDirection:'row'}}>
+                    <Image source={require("../../../Assest/starIcon.png")} />
+                    <Image source={require("../../../Assest/starIcon.png")} />
+                    <Image source={require("../../../Assest/starIcon.png")} />
+                    <Image source={require("../../../Assest/starIcon.png")} />
+                    <Image source={require("../../../Assest/starIcon.png")} />
+                </View>
+                <View>
+                    <Text style={styles.RatingText}>
+                        56,890
+                    </Text>
+                </View>
+            </View>
+            <View style={{flexDirection:'row', columnGap:10}}>
+                <Text style={{color:'#BBBBBB', textDecorationLine:'line-through'}}>
+                    ₹2,999
+                </Text>
+                <Text style={{color:'black'}}>
+                    ₹1,500
+                </Text>
+                <Text style={{color:'#FA7189'}}>
+                    50%Off
+                </Text>
+            </View>
+            <View>
+                <Text style={{color:'black'}}>
+                    Product Details
+                </Text>
+            </View>
+            <View>
+                <Text style={{color:'black'}}>
+                    Perhaps the most iconic sneaker of all-time, this original "Chicago"? colorway is the cornerstone to any sneaker collection. Made famous in 1985 by Michael Jordan, the shoe has stood the test of time, becoming the most famous colorway of the Air Jordan 1. This 2015 release saw the ...More
+                </Text>
+            </View>
+        </View>
+    )
+}
+
+const styles = StyleSheet.create({
+    ProductName:{
+        color:'black',
+        fontSize: 25,
+        fontWeight:'600',
+
+    },
+
+    Container:{
+        paddingHorizontal:5,
+        paddingVertical: 15
+    },
+
+    Description:{
+        color:'black',
+        fontSize: 15
+    },
+
+    RatingContainer:{
+        flexDirection:'row', 
+        paddingVertical:10, 
+        alignItems:'center', 
+        columnGap: 10
+    },
+
+    RatingText:{
+        color:'black'
+    }
+})
+
+export default Description

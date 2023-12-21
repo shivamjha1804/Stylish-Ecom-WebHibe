@@ -1,12 +1,12 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
 
-const SubCategory = (props) => {
+const SubCategory = ({item}) => {
   return (
     <View style={styles.Conatiner}>
-        <Image source={props.Image}/>
+        <Image source={item.Image}/>
         <Text style={styles.Text}>
-            {props.Label}
+            {item.Label}
         </Text>
     </View>
   )

@@ -3,10 +3,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Home from '../../Page/Home/Home'
 import Search from '../Search/Search'
 import Wishlist from '../../Page/Demopage/Wishlist';
-import Shop from '../../Page/Demopage/Shop';
 import Setting from '../../Page/Demopage/Setting';
 import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import TrendingProduct from '../../Page/TrendingProduct/TrendingProduct';
+import Shop from '../../Page/Shop/Shop';
 
 const Tab = createBottomTabNavigator();
 
@@ -44,8 +45,8 @@ const ButtomNavigator = () => {
         }}
       />
       <Tab.Screen 
-        name='Wishlist'
-        component={Wishlist}
+        name='TrendingProduct'
+        component={TrendingProduct}
         options={{
           tabBarIcon:({focused}) => {
             return(

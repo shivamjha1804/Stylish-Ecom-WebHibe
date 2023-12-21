@@ -1,20 +1,20 @@
 import React from 'react'
-import { Button, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import {  Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-const DealOfTheDay = () => {
+const DealOfTheDay = (props) => {
     return (
         <View style={{ backgroundColor: "white" }}>
-            <View style={styles.Container}>
+            <View style={{...styles.Container, backgroundColor: props.BackGroundColor}}>
                 <View style={styles.Row1}>
                     <View>
                         <Text style={{...styles.Text, fontSize: 18, fontWeight:'500'}}>
-                            Deal of the Day
+                            {props.Title}
                         </Text>
                     </View>
                     <View style={styles.Timer}>
-                        <Image style={{marginRight: 5}} source={require("../../Assest/watchIcon.png")} />
+                        <Image style={{marginRight: 5}} source={props.Icon} />
                         <Text style={styles.Text}>
-                            22h 55m 20s remaining
+                            {props.Timer}
                         </Text>
                     </View>
                 </View>
@@ -33,7 +33,6 @@ const DealOfTheDay = () => {
 
 const styles = StyleSheet.create({
     Container: {
-        backgroundColor: '#4392F9',
         marginHorizontal: 10,
         borderRadius: 5,
         flexDirection: 'row',
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         alignItems: 'center',
         paddingVertical: 10,
-
+        borderRadius: 10
 
     },
 

@@ -5,23 +5,23 @@ const SpecialOffer = () => {
     return (
         <View style={styles.Container}>
             <View style={styles.Row1}>
-                <Image source={require("../../Assest/offer.png")} />
+                <Image style={{height: 70, width: 80}} source={require("../../Assest/offer.png")} />
             </View>
             <View style={styles.Row2}>
-                <View>
+                <View style={{flexDirection:'row', gap: 10, alignItems:'center', paddingBottom: 10}}>
                     <View>
-                        <Text>
+                        <Text style={styles.SpecialOffer}>
                             Special Offers
                         </Text>
                     </View>
                     <View>
-                        <Text>
+                        <Text style={{backgroundColor:'white', padding:5, borderRadius: 16, shadowColor:'black', elevation:1}}>
                             😱
                         </Text>
                     </View>
                 </View>
                 <View>
-                    <Text>
+                    <Text style={styles.Content}>
                         We make sure you get the offer you need at best prices
                     </Text>
                 </View>
@@ -33,8 +33,30 @@ const SpecialOffer = () => {
 const styles = StyleSheet.create({
     Container:{
         flexDirection:'row',
-        marginVertical: 15,
-        marginBottom: 500
+        backgroundColor:'white',
+        paddingVertical: 20,
+        paddingHorizontal: 10
+    },
+
+    Row1:{
+        alignItems:'center',
+        justifyContent:'center',
+
+    },
+
+    Row2:{
+        width: 190,
+        marginLeft: 40
+    },
+
+    SpecialOffer:{
+        fontSize: 20,
+        color:'black',
+        fontWeight:'500'
+    },
+
+    Content:{
+        color:'black'
     }
 });
 

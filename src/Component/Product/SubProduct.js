@@ -1,33 +1,33 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
 
-const SubProduct = (props) => {
+const SubProduct = ({item}) => {
     return (
-        <View style={{width: 191}}>
+        <View style={{width: 191, paddingVertical: 10}}>
             <View style={styles.Row1}>
-                <Image borderRadius={5} style={{width: 181, height: 150}} source={props.Image} />
+                <Image borderRadius={5} style={{width: 181, height: 150}} source={item.Image} />
             </View>
             <View style={styles.Row2}>
                 <Text style={styles.ProductName}>
-                    {props.Title}
+                    {item.Title}
                 </Text>
             </View>
             <View style={styles.Row3}>
                 <Text style={styles.ProductDiscription}>
-                    {props.Description}
+                    {item.Description}
                 </Text>
             </View>
             <View style={styles.Row4}>
                 <Text style={styles.ProductPrice}>
-                    {props.Price}
+                    {item.Price}
                 </Text>
             </View>
             <View style={styles.Row5}>
                 <Text style={styles.CrossedPrice}>
-                    {props.CrossedPrice}
+                    {item.CrossedPrice}
                 </Text>
                 <Text style={styles.Percentage}>
-                    {props.Percentage}
+                    {item.Percentage}
                 </Text>
             </View>
             <View style={styles.Row6}>
@@ -39,7 +39,7 @@ const SubProduct = (props) => {
                     <Image style={styles.HalfStar} source={require("../../Assest/halfstarIcon.png")} />
                 </View>
                 <Text style={styles.Rating}>
-                    {props.Rating}
+                    {item.Rating}
                 </Text>
             </View>
         </View>
