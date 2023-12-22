@@ -1,9 +1,12 @@
 import React from 'react'
-import { Image, Text, ScrollView, StyleSheet, View } from 'react-native'
+import { Image, Text, ScrollView, StyleSheet, View, TouchableOpacity } from 'react-native'
+import Profile from '../../Page/Profile/Profile'
+import { useNavigation } from '@react-navigation/native';
 
 const Header = () => {
+    const Navigation = useNavigation();
     return (
-        <View  style={{backgroundColor: 'white'}}>
+        <View style={{ backgroundColor: 'white' }}>
             <View style={styles.InnerContainer}>
                 <View style={styles.Row1}>
                     <Image style={styles.Hamburger} source={require('../../Assest/menu.png')} />
@@ -14,9 +17,13 @@ const Header = () => {
                         Stylish
                     </Text>
                 </View>
-                <View style={styles.Row3}>
-                    <Image source={require('../../Assest/userImage.png')} />
-                </View>
+                <TouchableOpacity onPress={() => {
+                    Navigation.navigate("Profile")
+                }}>
+                    <View style={styles.Row3}>
+                        <Image source={require('../../Assest/userImage.png')} />
+                    </View>
+                </TouchableOpacity>
             </View>
         </View>
     )

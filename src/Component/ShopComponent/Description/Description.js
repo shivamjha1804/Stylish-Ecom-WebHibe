@@ -15,7 +15,7 @@ const Description = () => {
                 </Text>
             </View>
             <View style={{flexDirection:'row', paddingVertical:10, alignItems:'center', columnGap: 10}}>
-                <View style={{flexDirection:'row'}}>
+                <View style={{flexDirection:'row', columnGap:2}}>
                     <Image source={require("../../../Assest/starIcon.png")} />
                     <Image source={require("../../../Assest/starIcon.png")} />
                     <Image source={require("../../../Assest/starIcon.png")} />
@@ -29,18 +29,18 @@ const Description = () => {
                 </View>
             </View>
             <View style={{flexDirection:'row', columnGap:10}}>
-                <Text style={{color:'#BBBBBB', textDecorationLine:'line-through'}}>
+                <Text style={{color:'#808488', textDecorationLine:'line-through'}}>
                     ₹2,999
                 </Text>
-                <Text style={{color:'black'}}>
+                <Text style={{color:'black', fontWeight:'600'}}>
                     ₹1,500
                 </Text>
-                <Text style={{color:'#FA7189'}}>
+                <Text style={{color:'#FA7189', fontWeight:'700'}}>
                     50%Off
                 </Text>
             </View>
             <View>
-                <Text style={{color:'black'}}>
+                <Text style={styles.ProductDetails}>
                     Product Details
                 </Text>
             </View>
@@ -79,7 +79,14 @@ const styles = StyleSheet.create({
     },
 
     RatingText:{
-        color:'black'
+        color:'#828282'
+    },
+
+    ProductDetails:{
+        color:'black', 
+        fontWeight:'500',
+        marginTop: 10,
+        marginBottom: 3
     }
 })
 

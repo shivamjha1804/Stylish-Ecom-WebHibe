@@ -1,25 +1,48 @@
 import React from 'react'
 import Header2 from '../../Component/Header2/Header2'
-import { StyleSheet, View } from 'react-native'
+import { ScrollView, StyleSheet, View } from 'react-native'
 import ProductImage from '../../Component/ShopComponent/ProductImage/ProductImage'
 import Size from '../../Component/ShopComponent/Size/Size'
 import Description from '../../Component/ShopComponent/Description/Description'
+import Tags from '../../Component/ShopComponent/Tag/Tags'
+import BuyNow from '../../Component/ShopComponent/BuyNow/BuyNow'
+import AddCart from '../../Component/ShopComponent/AddCart/AddCart'
+import Timer from '../../Component/ShopComponent/Timer/Timer'
+import ProductName from '../../Component/ProductName/ProductName'
+import Filter from '../../Component/Filter/Filter'
+import Compare from '../../Component/ShopComponent/Compare/Compare'
 
 const Shop = () => {
   return (
     <View style={styles.Container}>
+        <ScrollView>
         <Header2 ImageLeft={require("../../Assest/BackIcon.png")} ImageRight={require("../../Assest/cartIcon.png")}/>
         <ProductImage/>
         <Size/>
         <Description/>
+        <Tags/>
+        <View style={{flexDirection:'row', columnGap: 20, marginVertical: 20, marginHorizontal: 15}}>
+          <AddCart/>
+          <BuyNow/>
+        </View>
+        <Timer/>
+        <View style={{flexDirection:'row', columnGap: 5, marginHorizontal: 10, marginTop: 20}}>
+            <Compare Title={"View Similar"} Image={require("../../Assest/viewIcon.png")}/>
+            <Compare Title={"Add to Compare"} Image={require("../../Assest/compareIcon.png")}/>
+        </View>
+        <Filter Title={"Similar to 2822+ Iteams"}/>
+        <ProductName/>
+
+        </ScrollView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
     Container:{
-        paddingHorizontal: 10,
-        justifyContent: 'center'
+        paddingHorizontal: 5,
+        justifyContent: 'center',
+        backgroundColor:'white'
     }
 })
 

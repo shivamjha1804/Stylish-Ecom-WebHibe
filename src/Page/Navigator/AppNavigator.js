@@ -6,6 +6,8 @@ import Login from '../LoginPage/Login';
 import SignUp from '../SignUp/SignUp';
 import ForgetPassword from '../LoginPage/ForgetPassword';
 import Dashboard from '../Dashboard/Dashboard';
+import Profile from '../Profile/Profile';
+import Cart from '../Cart/Cart';
 
 const Stack = createNativeStackNavigator()
 
@@ -42,6 +44,19 @@ const AppNavigator = () => {
           options={{headerShown: false}}
         />
 
+        <Stack.Screen
+          name='Profile'
+          component={Profile}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name='Cart'
+          component={Cart}
+          options={{headerShown: false}}
+        />
+
+        
       </Stack.Navigator>
     </NavigationContainer>
   )
