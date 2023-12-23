@@ -3,7 +3,7 @@ import { Text, View } from 'react-native'
 
 const Timer = () => {
   return (
-    <View style={{backgroundColor:'#FFCCD5', paddingVertical: 20, marginHorizontal: 10, borderRadius: 10, paddingLeft: 30}}>
+    <View style={{backgroundColor:'#FFCCD5', paddingVertical: 20, borderRadius: 10, paddingLeft: 30}}>
       <Text style={{color:'black', fontSize: 18, fontWeight:'500'}}>
         Delivery in
       </Text>

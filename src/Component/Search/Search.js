@@ -22,7 +22,6 @@ const Search = () => {
 const styles = StyleSheet.create({
     InnerContainer: {
         flexDirection: 'row',
-        marginHorizontal: 26,
         marginTop: 30,
         justifyContent: 'space-between',
         alignItems: 'center',

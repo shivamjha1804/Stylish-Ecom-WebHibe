@@ -23,7 +23,7 @@ const Details = [
 
 const Tags = () => {
     return (
-        <View style={{flexDirection:'row', columnGap:8, marginHorizontal: 5}}>
+        <View style={{flexDirection:'row', columnGap:8,}}>
             {
                 Details.map((item, index) => {
                     return(

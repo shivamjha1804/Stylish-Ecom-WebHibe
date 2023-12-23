@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 
 
-const SubSize = ({item},) => {
-  const [size, setSize] = useState("");
-
+const SubSize = ({item, getSize}) => {
   return (
-    <View style={{paddingHorizontal: 5, }}>
+    <View style={{paddingRight: 8}}>
         {/* Buttom */}
         <View style={{ columnGap: 15}}>
             <View>
                 <TouchableOpacity style={{...styles.Button, }}  onPress={() => {
-                    setSize(`${item.size}`)
+                    getSize(`${item.size}`)
+
                 }}>
                     <Text style={styles.Text}>
                         {item.size}UK

@@ -15,35 +15,39 @@ import Compare from '../../Component/ShopComponent/Compare/Compare'
 const Shop = () => {
   return (
     <View style={styles.Container}>
-        <ScrollView>
-        <Header2 ImageLeft={require("../../Assest/BackIcon.png")} ImageRight={require("../../Assest/cartIcon.png")}/>
-        <ProductImage/>
-        <Size/>
-        <Description/>
-        <Tags/>
-        <View style={{flexDirection:'row', columnGap: 20, marginVertical: 20, marginHorizontal: 15}}>
-          <AddCart/>
-          <BuyNow/>
+      <ScrollView>
+        <View style={{ paddingHorizontal: 20 }}>
+          <Header2 ImageLeft={require("../../Assest/BackIcon.png")} ImageRight={require("../../Assest/cartIcon.png")} />
+          <ProductImage />
+          <Size />
+          <Description />
+          <Tags />
+          <View style={{ flexDirection: 'row', columnGap: 20, marginVertical: 20, marginLeft: 11 }}>
+            <AddCart />
+            <BuyNow />
+          </View>
+          <Timer />
+          <View style={{ flexDirection: 'row', columnGap: 5, marginTop: 20 }}>
+            <Compare Title={"View Similar"} Image={require("../../Assest/viewIcon.png")} />
+            <Compare Title={"Add to Compare"} Image={require("../../Assest/compareIcon.png")} />
+          </View>
+          <Filter Title={"Similar to 2822+ Iteams"} />
         </View>
-        <Timer/>
-        <View style={{flexDirection:'row', columnGap: 5, marginHorizontal: 10, marginTop: 20}}>
-            <Compare Title={"View Similar"} Image={require("../../Assest/viewIcon.png")}/>
-            <Compare Title={"Add to Compare"} Image={require("../../Assest/compareIcon.png")}/>
+        <View style={{paddingRight:100}}>
+          <ProductName />
         </View>
-        <Filter Title={"Similar to 2822+ Iteams"}/>
-        <ProductName/>
 
-        </ScrollView>
+      </ScrollView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    Container:{
-        paddingHorizontal: 5,
-        justifyContent: 'center',
-        backgroundColor:'white'
-    }
+  Container: {
+    justifyContent: 'center',
+    backgroundColor: 'white',
+
+  }
 })
 
 export default Shop

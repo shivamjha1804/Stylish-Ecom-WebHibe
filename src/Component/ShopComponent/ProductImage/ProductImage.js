@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
 
     subContainer: {
         marginTop: 20,
-        marginHorizontal: 15,
         height: 270
     },
 })

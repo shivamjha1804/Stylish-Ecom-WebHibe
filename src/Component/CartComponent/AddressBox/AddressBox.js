@@ -3,7 +3,7 @@ import { Image, Text, TouchableOpacity, View } from 'react-native'
 
 const AddressBox = () => {
     return (
-        <View style={{ flexDirection: 'row', columnGap: 10, marginHorizontal: 20 }}>
+        <View style={{ flexDirection: 'row', columnGap: 10,}}>
             <View style={{ backgroundColor: 'white', borderWidth: 0.4, borderRadius: 10, width: "70%", borderColor: '#CACACA' }}>
                 <View style={{ margin: 10 }}>
                     <TouchableOpacity>

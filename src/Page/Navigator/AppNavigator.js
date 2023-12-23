@@ -8,6 +8,7 @@ import ForgetPassword from '../LoginPage/ForgetPassword';
 import Dashboard from '../Dashboard/Dashboard';
 import Profile from '../Profile/Profile';
 import Cart from '../Cart/Cart';
+import Buy from '../Buy/Buy';
 
 const Stack = createNativeStackNavigator()
 
@@ -53,6 +54,12 @@ const AppNavigator = () => {
         <Stack.Screen
           name='Cart'
           component={Cart}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name='Buy'
+          component={Buy}
           options={{headerShown: false}}
         />
 

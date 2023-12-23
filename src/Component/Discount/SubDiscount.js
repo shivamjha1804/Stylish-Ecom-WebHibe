@@ -31,6 +31,7 @@ const SubDiscount = (props) => {
 const styles = StyleSheet.create({
     Container: {
         height: 189,
+        width: 366,
         justifyContent: 'center',
     },
 

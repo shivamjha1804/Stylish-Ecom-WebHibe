@@ -60,7 +60,6 @@ const Product = () => {
 const styles = StyleSheet.create({
     contentContainer: {
         paddingVertical: 20,
-        marginHorizontal: 10
     },
 
     Container:{

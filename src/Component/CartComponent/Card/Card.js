@@ -23,7 +23,7 @@ const Details = [
             Black: "Black",
             Red: "Red"
         },
-        Rating: "4.8",
+        Rating: "4",
         Price: "$ 34.00",
         Discount: "33",
         CrossedPrice: "$ 64.00"
@@ -36,7 +36,7 @@ const Details = [
             Black: "Black",
             Red: "Red"
         },
-        Rating: "4.8",
+        Rating: "3.5",
         Price: "$ 34.00",
         Discount: "33",
         CrossedPrice: "$ 64.00"

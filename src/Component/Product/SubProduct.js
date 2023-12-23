@@ -1,11 +1,12 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
+import Star from '../../Component/Star/Star'
 
-const SubProduct = ({item}) => {
+const SubProduct = ({ item }) => {
     return (
-        <View style={{width: 191, paddingVertical: 10}}>
+        <View style={{ width: 191, paddingVertical: 10 }}>
             <View style={styles.Row1}>
-                <Image borderRadius={5} style={{width: 181, height: 150}} source={item.Image} />
+                <Image borderRadius={5} style={{ width: 181, height: 150 }} source={item.Image} />
             </View>
             <View style={styles.Row2}>
                 <Text style={styles.ProductName}>
@@ -32,11 +33,18 @@ const SubProduct = ({item}) => {
             </View>
             <View style={styles.Row6}>
                 <View style={styles.StarGroup}>
-                    <Image style={styles.Star} source={require("../../Assest/starIcon.png")} />
-                    <Image style={styles.Star} source={require("../../Assest/starIcon.png")} />
-                    <Image style={styles.Star} source={require("../../Assest/starIcon.png")} />
-                    <Image style={styles.Star} source={require("../../Assest/starIcon.png")} />
-                    <Image style={styles.HalfStar} source={require("../../Assest/halfstarIcon.png")} />
+                    <Star
+                        ActiveStarType='Entypo'
+                        ActiveStarColor="#EDB310"
+                        ActiveStarName="star"
+                        DeactivateStarType="Entypo"
+                        starSize={18}
+                        DeactivateStarName="star"
+                        DeactivateStarColor='#BBBBBB'
+                        // containerStyle={{ flexDirection: 'row', marginLeft: 8 }}
+                        defaultStar={4}
+
+                    />
                 </View>
                 <Text style={styles.Rating}>
                     {item.Rating}
@@ -47,21 +55,21 @@ const SubProduct = ({item}) => {
 }
 
 const styles = StyleSheet.create({
-   
-    Row2:{
-        marginTop:10,
+
+    Row2: {
+        marginTop: 10,
         marginLeft: 5
-    },  
+    },
     ProductName: {
         color: 'black',
         fontSize: 15,
         fontWeight: '600'
     },
 
-    Row3:{
+    Row3: {
         marginTop: 10,
         marginLeft: 5
-    },  
+    },
 
     ProductDiscription: {
         color: 'black',
@@ -70,9 +78,9 @@ const styles = StyleSheet.create({
         width: "95%"
     },
 
-    Row4:{
-        marginTop:8,
-        marginLeft:5
+    Row4: {
+        marginTop: 8,
+        marginLeft: 5
 
     },
 
@@ -80,7 +88,7 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 15,
         fontWeight: '600',
-        
+
     },
 
     Row5: {
@@ -94,7 +102,7 @@ const styles = StyleSheet.create({
         color: '#BBBBBB',
         fontSize: 15,
         fontWeight: '300',
-        textDecorationLine:'line-through'
+        textDecorationLine: 'line-through'
     },
 
     Percentage: {
@@ -103,25 +111,25 @@ const styles = StyleSheet.create({
         fontWeight: '300'
     },
 
-    Row6:{
-        flexDirection:'row',
+    Row6: {
+        flexDirection: 'row',
         gap: 10,
         marginTop: 10,
         marginLeft: 5
     },
 
-    StarGroup:{
-        flexDirection:'row',
+    StarGroup: {
+        flexDirection: 'row',
     },
 
-    Star:{
+    Star: {
         height: "120%",
         marginRight: 5
     },
 
-    Rating:{
-        fontWeight:'300',
-        color:"#A4A9B3"
+    Rating: {
+        fontWeight: '300',
+        color: "#A4A9B3"
     }
 })
 

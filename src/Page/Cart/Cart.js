@@ -7,7 +7,7 @@ import Card from '../../Component/CartComponent/Card/Card'
 
 const Cart = () => {
     return (
-        <ScrollView style={{backgroundColor:'white'}}>
+        <ScrollView style={{backgroundColor:'white', paddingHorizontal:20}}>
             <Header2 ImageLeft={require("../../Assest/BackIcon.png")} Title={"Checkout"} />
             <Label Image={require("../../Assest/locationIcon.png")} Title={"Delivery Address"}/>
             <AddressBox/>

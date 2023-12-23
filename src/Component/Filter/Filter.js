@@ -30,7 +30,6 @@ const Filter = (props) => {
 const styles = StyleSheet.create({
     Container:{
         flexDirection:'row',
-        marginHorizontal: 15,
         marginTop: 30,
         alignItems: 'center'
     },

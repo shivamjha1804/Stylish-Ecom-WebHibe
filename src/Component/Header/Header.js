@@ -34,8 +34,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginTop: 10,
         justifyContent: 'space-between',
-        marginHorizontal: 10,
-        marginTop: 40
     },
 
     Hamburger: {

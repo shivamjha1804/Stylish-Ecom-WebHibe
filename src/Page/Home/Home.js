@@ -12,10 +12,12 @@ import Offer from '../../Component/Offer/Offer';
 import ListOfProduct from '../../Component/ListOfProduct/ListOfProduct';
 import SummerSale from '../../Component/SummerSale/SummerSale';
 import Sponsered from '../../Component/Sponserd/Sponsered';
+import { StatusBar } from 'react-native-basic-elements';
 
 const Home = () => {
   return (
-    <ScrollView>
+    <ScrollView style={{backgroundColor:'white', paddingHorizontal:10}} >
+      <StatusBar backgroundColor={'white'}/>
       <Header />
       <Search />
       <Filter Title={"All Featured"}/>

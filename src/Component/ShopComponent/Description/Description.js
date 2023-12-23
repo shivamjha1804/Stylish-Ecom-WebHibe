@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
+import Star from '../../../Component/Star/Star'
 
 const Description = () => {
     return (
@@ -16,11 +17,18 @@ const Description = () => {
             </View>
             <View style={{flexDirection:'row', paddingVertical:10, alignItems:'center', columnGap: 10}}>
                 <View style={{flexDirection:'row', columnGap:2}}>
-                    <Image source={require("../../../Assest/starIcon.png")} />
-                    <Image source={require("../../../Assest/starIcon.png")} />
-                    <Image source={require("../../../Assest/starIcon.png")} />
-                    <Image source={require("../../../Assest/starIcon.png")} />
-                    <Image source={require("../../../Assest/starIcon.png")} />
+                    <Star
+                                ActiveStarType='Entypo'
+                                ActiveStarColor="#EDB310"
+                                ActiveStarName="star"
+                                DeactivateStarType="Entypo"
+                                starSize={18}
+                                DeactivateStarName="star"
+                                DeactivateStarColor='#BBBBBB'
+                                // containerStyle={{ flexDirection: 'row', marginLeft: 8 }}
+                                defaultStar={3.5}
+
+                            />
                 </View>
                 <View>
                     <Text style={styles.RatingText}>
@@ -62,7 +70,6 @@ const styles = StyleSheet.create({
     },
 
     Container:{
-        paddingHorizontal:5,
         paddingVertical: 15
     },
 
