@@ -34,7 +34,7 @@ const Login = () => {
             Forget Password
           </Text>
           <TouchableOpacity style={styles.button} onPress={() => {
-            Navigation.navigate("Dashboard")
+            Navigation.navigate("GetStarted")
           }}>
             <Text style={styles.buttonText}>
               Login

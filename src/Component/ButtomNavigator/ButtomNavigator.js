@@ -8,6 +8,7 @@ import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import TrendingProduct from '../../Page/TrendingProduct/TrendingProduct';
 import Shop from '../../Page/Shop/Shop';
+import DrawerNavigation from '../Drawer/DrawerNavigation';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,7 +31,7 @@ const ButtomNavigator = () => {
     <Tab.Navigator screenOptions={screenOptions}>
       <Tab.Screen 
         name='Home'
-        component={Home}
+        component={DrawerNavigation}
         options={{
           tabBarIcon:({focused}) => {
             return(

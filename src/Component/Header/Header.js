@@ -1,16 +1,19 @@
 import React from 'react'
-import { Image, Text, ScrollView, StyleSheet, View, TouchableOpacity } from 'react-native'
-import Profile from '../../Page/Profile/Profile'
+import { Image, Text, ScrollView, StyleSheet, View, TouchableOpacity, StatusBar } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
+import NavigationService from '../../../Service/Navigation';
 
 const Header = () => {
     const Navigation = useNavigation();
     return (
         <View style={{ backgroundColor: 'white' }}>
+            <StatusBar backgroundColor={'white'}/>
             <View style={styles.InnerContainer}>
-                <View style={styles.Row1}>
+                <TouchableOpacity style={styles.Row1} onPress={() => {
+                    NavigationService.openDrawer()
+                }}>
                     <Image style={styles.Hamburger} source={require('../../Assest/menu.png')} />
-                </View>
+                </TouchableOpacity>
                 <View style={styles.Row2}>
                     <Image source={require('../../Assest/logo.png')} />
                     <Text style={styles.LogoText}>
@@ -32,7 +35,7 @@ const Header = () => {
 const styles = StyleSheet.create({
     InnerContainer: {
         flexDirection: 'row',
-        marginTop: 10,
+        marginTop: 35,
         justifyContent: 'space-between',
     },
 

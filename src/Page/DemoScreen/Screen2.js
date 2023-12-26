@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-const DrawerNavigator = () => {
+const Screen2 = () => {
   return (
-    <View>
+    <View style={{backgroundColor:'brown', flex:1}}>
         <Text>
             Hello
         </Text>
@@ -11,4 +11,4 @@ const DrawerNavigator = () => {
   )
 }
 
-export default DrawerNavigator
+export default Screen2

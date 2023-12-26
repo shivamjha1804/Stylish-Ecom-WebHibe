@@ -1,12 +1,16 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 import { StatusBar, StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native'
 
 const GetStarted = () => {
+    const Navigation = useNavigation();
     return (
         <ImageBackground style={styles.container} source={require('../../Assest/BackGround.png')}>
             <StatusBar backgroundColor={'transparent'} translucent />
             <View>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => {
+                    Navigation.navigate("Dashboard")
+                }}>
                     <Text style={styles.buttonText}>
                         Get Started
                     </Text>

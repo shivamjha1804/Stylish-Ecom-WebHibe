@@ -9,12 +9,20 @@ import Dashboard from '../Dashboard/Dashboard';
 import Profile from '../Profile/Profile';
 import Cart from '../Cart/Cart';
 import Buy from '../Buy/Buy';
+import Payment from '../Payment/Payment';
+import PaymentConfirmation from '../PaymentConfirmation/PaymentConfirmation';
+import GetStarted from '../GetStarted/GetStarted';
+import NavigationService from '../../../Service/Navigation';
+import Screen1 from '../DemoScreen/Screen1';
+import Screen2 from '../DemoScreen/Screen2';
+import Screen3 from '../DemoScreen/Screen3';
 
 const Stack = createNativeStackNavigator()
 
 const AppNavigator = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={r => NavigationService.setTopLevelNavigator(r)}>
+      
       <Stack.Navigator>
         <Stack.Screen
           name='slide1'
@@ -30,6 +38,24 @@ const AppNavigator = () => {
         <Stack.Screen
           name='signUp'
           component={SignUp}
+          options={{ headerShown: false }}
+        />
+        
+        <Stack.Screen
+          name='Screen1'
+          component={Screen1}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name='Screen2'
+          component={Screen2}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name='Screen3'
+          component={Screen3}
           options={{ headerShown: false }}
         />
 
@@ -60,6 +86,24 @@ const AppNavigator = () => {
         <Stack.Screen
           name='Buy'
           component={Buy}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name='Payment'
+          component={Payment}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name='PaymentConfirmation'
+          component={PaymentConfirmation}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name='GetStarted'
+          component={GetStarted}
           options={{headerShown: false}}
         />
 
